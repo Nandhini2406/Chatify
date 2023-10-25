@@ -4,11 +4,18 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: '50%', 
+  },
+  img:{
+    width: 180,
+    height: 150,
   },
   title: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginTop: 50,
+    marginBottom: 180,
+    color: '#7956D8',
+    letterSpacing: 1.5,
   },
 });
