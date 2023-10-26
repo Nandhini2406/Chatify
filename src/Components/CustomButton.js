@@ -2,52 +2,44 @@ import React from 'react';
 import {Text, TouchableOpacity, StyleSheet} from 'react-native';
 // import {styles}    from './styles';
 
-const CustomButton = ({onPress, text, type = 'Primary'}) => {
+const CustomButton = ({onPress, text}) => {
   return (
-    <TouchableOpacity onPress={onPress} style={[styles[`container_${type}`]]}>
-      <Text style={[styles.text, styles[`text_${type}`]]}>{text}</Text>
+    <TouchableOpacity onPress={onPress} style={styles.container}>
+      <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    width: '70%',
-    margin: '3%',
-    padding: '3%',
-    alignItems: 'center',
-  },
-  container_Primary: {
     width: '80%',
     margin: '3%',
-    padding: '2%',
+    padding: 8,
     alignItems: 'center',
 
     borderRadius: 25,
 
     backgroundColor: '#7956D8',
-    shadowColor: '#000',
+    shadowColor: 'red',
     shadowOffset: {
-      width: 0,
-      height: 2,
+      width: 5,
+      height: 10,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
-  container_Tertiary: {
-    margin: '1%',
-    alignItems: 'center',
+    shadowOpacity: 0.9,
+    shadowRadius: 10,
+    // elevation: 2,
   },
   text: {
-    fontWeight: 'bold',
+    fontWeight: '500',
     color: 'white',
-    fontSize: 22,
-  },
-  text_Tertiary: {
-    fontSize: 16,
-    color: 'white',
-    fontWeight: 'bold',
+    fontSize: 20,
+    shadowColor: 'red',
+    // shadowOffset: {
+    //   width: 5,
+    //   height: 10,
+    // },
+    shadowOpacity: 0.9,
+    shadowRadius: 10,
   },
 });
 
